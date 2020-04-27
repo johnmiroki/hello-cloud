@@ -1,0 +1,19 @@
+server:
+  port: 8762spring:
+  profiles:
+    active: git
+  application:
+    name: config-server
+  cloud:
+    config:
+      override-system-properties: false
+      server:
+        git:
+          uri: https://github.com/athulravindran87/spring-cloud-config.git
+          clone-on-start: true
+          search-paths:
+            config-server/src/main/resources/config-repo/,
+            config-server/src/main/resources/config-repo/client-config-first,
+            config-server/src/main/resources/config-repo/client-discovery-first
+          username: xxx
+          password: yyy

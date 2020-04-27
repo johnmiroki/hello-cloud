@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native # using local file system or classpath
+  cloud:
+    config:
+      name: config-server
+      override-system-properties: false
+      server:
+        native:
+          search-locations:
+            - classpath:/config-repo/{application}/{label} #{application} is essential
+            - classpath:/config-repo/{application}
