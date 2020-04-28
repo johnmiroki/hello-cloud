@@ -13,3 +13,10 @@ spring:
           search-locations:
             - classpath:/config-repo/{application}/{label} #{application} is essential
             - classpath:/config-repo/{application}
+
+  application:
+    name: config-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
