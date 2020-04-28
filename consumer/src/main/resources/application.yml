@@ -9,3 +9,6 @@ eureka:
 spring:
   application:
     name: consumer
+  cloud:
+    config:
+      uri: http://config-server
